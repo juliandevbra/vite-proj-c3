@@ -8,6 +8,10 @@
     border-radius:  10px;
 }
 
+.titulo{
+    color: black;
+}
+
 .elem {
     width: 500px;
 }

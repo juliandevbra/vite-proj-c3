@@ -12,3 +12,8 @@
     object-fit: cover;
     margin-top: 10px;
 }
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
