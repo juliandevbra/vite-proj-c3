@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Card.css'
+import '../Styles/Card.css'
 
 const Card = ({plato, setPedidos}) => {
   const { img, tipo, precio } = plato
@@ -22,7 +22,12 @@ const Card = ({plato, setPedidos}) => {
           <h4>{counter}</h4>
           <button onClick={sumar}>+</button>
         </div>
-        <button onClick={() => setPedidos((prev) => [...prev, plato])} style={{margin: '10px'}}>Agregar pedido</button>
+        <button 
+          onClick={() => setPedidos((prev) => [...prev, {...plato, counter: counter}])} 
+          style={{margin: '10px'}}
+        >
+          Agregar pedido
+          </button>
     </div>
   )
 }

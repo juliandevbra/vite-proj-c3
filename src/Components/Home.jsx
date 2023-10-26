@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import imgpizza from '../assets/pizza_de_mozzarella.jpg'
 import Card from './Card'
-import { home, titulo } from './Home.module.css'
+import { home, titulo } from '../Styles/Home.module.css'
+import Formulario from './Formulario'
 
 const Home = () => {
   const [pedidos, setPedidos] = useState([])
@@ -17,8 +18,9 @@ const Home = () => {
     <div className={home}>
       <h3 style={{color: 'black'}}>Pedidos</h3>
       <ul style={{color: 'black'}}>
-        {pedidos.map(pedido => <li key={pedido.id}>{pedido.tipo}</li>)}
+        {pedidos.map(pedido => <li key={pedido.id}>{pedido.tipo} - {pedido.counter}</li>)}
       </ul>
+      {pedidos.length > 0 && <Formulario/>}
       <h1 className={titulo}>Sección pizzeria</h1>
         {pizzas.map(pizza => <Card setPedidos={setPedidos} key={pizza.id} plato={pizza} />)}
     </div>

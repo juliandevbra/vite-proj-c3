@@ -1,6 +1,6 @@
 import React from 'react'
 
-const headerStyle = {display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}
+const headerStyle = {color: 'white', display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}
 
 const Header = () => {
   
